@@ -3,3 +3,29 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+
+
+app_booking_index:
+    path: /api/bookings
+    controller: App\Controller\BookingController::index
+    methods: GET
+
+app_booking_show:
+    path: /api/bookings/{id}
+    controller: App\Controller\BookingController::show
+    methods: GET
+
+app_booking_create:
+    path: /api/bookings
+    controller: App\Controller\BookingController::create
+    methods: POST
+
+app_booking_update:
+    path: /api/bookings/{id}
+    controller: App\Controller\BookingController::update
+    methods: PUT
+
+app_booking_delete:
+    path: /api/bookings/{id}
+    controller: App\Controller\BookingController::delete
+    methods: DELETE

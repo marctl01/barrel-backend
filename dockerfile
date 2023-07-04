@@ -12,6 +12,8 @@ RUN apt-get update \
     && apt-get install -y \
         libzip-dev \
         zip \
+        libpq-dev \
+        && docker-php-ext-install pdo pdo_mysql \
     && docker-php-ext-install zip \
     && a2enmod rewrite
 
